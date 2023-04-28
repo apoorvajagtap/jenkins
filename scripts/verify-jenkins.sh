@@ -242,7 +242,7 @@ verify_installed_packages() {
 			printf "\t%-50s" "- checking $e ..."
 			if ! yum list installed "${e}" &> /dev/null; then
 				printf "FAIL\n"
-				printf "package %s is not installed" "${e}\n" >> $FAILED_LOG_LOCATION
+				printf "package %s is not installed\n" "${e}" >> $FAILED_LOG_LOCATION
 			else
 				printf "PASS\n"
 			fi
